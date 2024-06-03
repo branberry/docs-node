@@ -8,5 +8,4 @@ giza.log
 .vscode*
 *.swp
 *.code-workspace
-package.json
 package-lock.json
