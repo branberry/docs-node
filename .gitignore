@@ -9,3 +9,13 @@ giza.log
 *.swp
 *.code-workspace
 package-lock.json
+
+# Local Netlify folder
+.netlify
+
+snooty
+snooty-parser
+snooty-parser.zip
+deno.lock
+build-site.sh
+build-dev-site.sh
