@@ -4,15 +4,14 @@ from = "/stable"
 to = "/current"
 status = 301
 
-[dev]
-command = "make dev"      # Command to start your dev server
-port = 8888               # The port that the Netlify Dev will be accessible on
-publish = "snooty/public" # If you use a _redirect file, provide the path to your static content folder
-
-
 # Production context: all deploys from the Production branch
 # set in your site’s Branches settings in the UI will inherit
 # these settings.
 [context.production]
 publish = "snooty/public"
 command = "make prod"
+
+[dev]
+command = "make dev"  # Command to start your dev server
+port = 8888           # The port that the Netlify Dev will be accessible on
+dir = "snooty/public" # If you use a _redirect file, provide the path to your static content folder

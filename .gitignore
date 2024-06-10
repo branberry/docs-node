@@ -8,7 +8,6 @@ giza.log
 .vscode*
 *.swp
 *.code-workspace
-package-lock.json
 
 # Local Netlify folder
 .netlify
@@ -19,3 +18,6 @@ snooty-parser.zip
 deno.lock
 build-site.sh
 build-dev-site.sh
+.htaccess
+*.cache.gz
+bundle.zip
