@@ -4,8 +4,11 @@ from = "/stable"
 to = "/current"
 status = 301
 
-[[plugins]]
-package = "./cache-plugin"
+[integrations.dev]
+# Set the "path" as the path from your test site to your integration's build folder.
+path = "./snooty-cache-plugin"
+# The following forces the integration to be used when building the test site.
+force_run_in_build = true
 
 # Production context: all deploys from the Production branch
 # set in your site’s Branches settings in the UI will inherit
