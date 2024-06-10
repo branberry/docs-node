@@ -12,7 +12,7 @@ package = "./cache-plugin"
 # these settings.
 [context.production]
 publish = "snooty/public"
-command = "make prod"
+command = ". ./build.sh"
 
 [dev]
 command = "make dev"  # Command to start your dev server
