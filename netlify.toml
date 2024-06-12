@@ -11,3 +11,4 @@ command = ". ./build.sh"
 [[redirects]]
 from = "/fundamentals/versioned-api/"
 to = "/fundamentals/stable-api/"
+force = true
