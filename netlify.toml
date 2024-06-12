@@ -7,3 +7,7 @@ name = "snooty-cache-plugin"
 [context.production]
 publish = "snooty/public"
 command = ". ./build.sh"
+
+[[redirects]]
+from = "/fundamentals/versioned-api/"
+to = "/fundamentals/stable-api/"
