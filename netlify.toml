@@ -12,3 +12,9 @@ command = ". ./build.sh"
 from = "/fundamentals/versioned-api/"
 to = "/fundamentals/stable-api/"
 force = true
+
+[[redirects]]
+from = "/*"
+to = "/docs/:splat"
+force = true
+status = 200
