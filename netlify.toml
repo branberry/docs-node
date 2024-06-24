@@ -8,10 +8,10 @@ name = "snooty-cache-plugin"
 publish = "snooty/public"
 command = ". ./build.sh"
 
-[[redirects]]
-from = "/fundamentals/versioned-api/"
-to = "/fundamentals/stable-api/"
-force = true
+# [[redirects]]
+# from = "/fundamentals/versioned-api/"
+# to = "/fundamentals/stable-api/"
+# force = true
 
 [[redirects]]
 from = "/docs/*"
