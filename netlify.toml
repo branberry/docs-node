@@ -1,9 +1,12 @@
 [[integrations]]
 name = "snooty-cache-plugin"
 
-# Production context: all deploys from the Production branch
-# set in your site’s Branches settings in the UI will inherit
-# these settings.
+[integrations.dev]
+# Set the "path" as the path from your test site to your integration's build folder.
+path = "../chatbot-netlify-integration/"
+# The following forces the integration to be used when building the test site.
+force_run_in_build = true
+
 [build]
 publish = "snooty/public"
 command = ". ./build.sh"
@@ -18,3 +21,8 @@ from = "/docs/*"
 to = "/:splat"
 force = true
 status = 200
+
+
+[[redirects]]
+from = "/docs-qa/*"
+to = "/:splat"
