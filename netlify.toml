@@ -11,18 +11,13 @@ force_run_in_build = true
 publish = "snooty/public"
 command = ". ./build.sh"
 
-# [[redirects]]
-# from = "/fundamentals/versioned-api/"
-# to = "/fundamentals/stable-api/"
-# force = true
+[[redirects]]
+from = "/fundamentals/versioned-api/"
+to = "/fundamentals/stable-api/"
+force = true
 
 [[redirects]]
 from = "/docs/*"
 to = "/:splat"
 force = true
 status = 200
-
-
-[[redirects]]
-from = "/docs-qa/*"
-to = "/:splat"
