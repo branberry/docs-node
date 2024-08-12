@@ -1,6 +1,11 @@
 [[integrations]]
 name = "snooty-cache-plugin"
 
+
+[[edge_functions]]
+function = "redirects"
+path = "/*"
+
 [integrations.dev]
 # Set the "path" as the path from your test site to your integration's build folder.
 path = "../chatbot-netlify-integration/"
