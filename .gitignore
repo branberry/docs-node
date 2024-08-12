@@ -8,3 +8,16 @@ giza.log
 .vscode*
 *.swp
 *.code-workspace
+
+# Local Netlify folder
+.netlify
+
+snooty
+snooty-parser
+snooty-parser.zip
+deno.lock
+build-site.sh
+build-dev-site.sh
+.htaccess
+*.cache.gz
+bundle.zip
