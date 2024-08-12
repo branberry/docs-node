@@ -5,14 +5,14 @@ const SITES: Record<string, string> = {
 const HOST_PATTERN = /^\/docs\/([^\/]+)\/([^\/]+)(.+)/;
 const NOT_FOUND_URL = new URL("https://www.mongodb.com/docs/404/");
 
-export default async (req: Request): Promise<Response | URL> => {
+export default async (req: Request): Promise<Response | undefined> => {
   const requestUrl = new URL(req.url);
 
   // Look at the request path and deduce what host we want to route to
   const match = requestUrl.pathname.match(HOST_PATTERN);
   if (match === null) {
     console.error(`Error with url: ${req.url}: Not fully qualified`);
-    return requestUrl;
+    return;
   }
   const [_, sitename, siteversion, newpath] = match;
 
