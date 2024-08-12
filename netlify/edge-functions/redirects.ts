@@ -13,10 +13,10 @@ export default async (req: Request): Promise<Response | undefined> => {
   if (match === null) {
     return;
   }
-  const [version, sitename, fullPath, newpath] = match;
+  const [version] = match;
   console.log('match', match)
 
-  const updatedPath = fullPath.split(version)[1] ?? ''
+  const updatedPath = match.input?.split(version)[1] ?? ''
 
   // Construct a new URL to return
   const hostname = `${version}--docs-node-branfork.netlify.app`;
