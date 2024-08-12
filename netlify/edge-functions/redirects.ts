@@ -21,6 +21,6 @@ export default async (req: Request): Promise<Response> => {
   const hostname = `${siteversion}--docs-.netlify.app`;
   const url = new URL(`https://${hostname}`);
   url.pathname = newpath;
-//
+///
   return fetch(url);
 };
