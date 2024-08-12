@@ -13,15 +13,17 @@ export default async (req: Request): Promise<Response | undefined> => {
   if (match === null) {
     return;
   }
-  const [_, sitename, siteversion, newpath] = match;
+  const [version, sitename, fullPath, newpath] = match;
   console.log('match', match)
 
+  const updatedPath = fullPath.split(version)[1] ?? ''
+
   // Construct a new URL to return
-  const hostname = `${siteversion}--docs-node-branfork.netlify.app`;
+  const hostname = `${version}--docs-node-branfork.netlify.app`;
   const url = new URL(`https://${hostname}`);
 
+  url.pathname = updatedPath;
   console.log('url', url);
-  // url.pathname = newpath;
 
   return fetch(url);
 };
