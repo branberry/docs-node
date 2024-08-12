@@ -18,7 +18,7 @@ export default async (req: Request): Promise<Response> => {
 
 
   // Construct a new URL to return
-  const hostname = `${siteversion}--docs-.netlify.app`;
+  const hostname = `${siteversion}--docs-node-branfork.netlify.app`;
   const url = new URL(`https://${hostname}`);
   url.pathname = newpath;
 
