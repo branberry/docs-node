@@ -1,4 +1,4 @@
-import { callPostBuildWebhook } from '../../plugins/gatsby-source-snooty-preview/utils/post-build';
+import { callPostBuildWebhook } from '../../snooty/plugins/gatsby-source-snooty-preview/utils/post-build';
 import { constructResPayload } from '../utils';
 
 export async function handler(event, _context) {
