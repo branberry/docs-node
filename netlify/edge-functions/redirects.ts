@@ -17,10 +17,10 @@ export default async (req: Request): Promise<Response> => {
   const [_, sitename, siteversion, newpath] = match;
 
 
+  console.log(newpath)
   // Construct a new URL to return
   const hostname = `${siteversion}--docs-node-branfork.netlify.app`;
   const url = new URL(`https://${hostname}`);
-  url.pathname = newpath;
 
   return fetch(url);
 };
