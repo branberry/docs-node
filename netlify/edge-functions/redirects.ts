@@ -5,7 +5,7 @@ const SITES: Record<string, string> = {
 const HOST_PATTERN = /(?:v\d\.\d+)/;
 const NOT_FOUND_URL = new URL("https://www.mongodb.com/docs/404/");
 
-export default async (req: Request): Promise<Response | undefined> => {
+export default async (req: Request): Promise<URL | undefined> => {
   const requestUrl = new URL(req.url);
 
   // Look at the request path and deduce what host we want to route to
@@ -24,5 +24,5 @@ export default async (req: Request): Promise<Response | undefined> => {
   url.pathname = updatedPath;
   console.log('url', url);
 
-  return fetch(url);
+  return url
 };
