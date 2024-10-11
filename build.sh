@@ -16,10 +16,10 @@ echo "==========================================================================
 ./snooty-parser/snooty/snooty build . --output=./bundle.zip
 echo "========================================================================== Parser complete ============================================================================"
 echo "======================================================================================================================================================================="
-
+rm -rf snooty
 if [ ! -d "snooty" ]; then
   echo "snooty frontend not installed, downloading"
-  git clone -b netlify-poc --depth 1 https://github.com/mongodb/snooty.git 
+  git clone -b v0.17.2 --depth 1 https://github.com/mongodb/snooty.git 
   echo GATSBY_MANIFEST_PATH=$(pwd)/bundle.zip >> ./snooty/.env.production
   cd snooty
   npm ci --legacy-peer-deps
@@ -33,4 +33,3 @@ fi
 #   node --unhandled-rejections=strict docs-worker-pool/modules/persistence/dist/index.js --path bundle.zip --githubUser netlify
 # fi
 
-ps aux
