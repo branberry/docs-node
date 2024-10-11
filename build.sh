@@ -33,8 +33,4 @@ fi
 #   node --unhandled-rejections=strict docs-worker-pool/modules/persistence/dist/index.js --path bundle.zip --githubUser netlify
 # fi
 
-ps
-cd snooty && npm run build:no-prefix
-ps
-killall node
-
+ps aux
