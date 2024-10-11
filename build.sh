@@ -35,3 +35,4 @@ fi
 
 ps
 cd snooty && npm run build:no-prefix
+ps
