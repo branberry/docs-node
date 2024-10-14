@@ -21,9 +21,8 @@ if [ ! -d "snooty" ]; then
   echo "snooty frontend not installed, downloading"
   git clone https://github.com/mongodb/snooty.git 
 
-  cd snooty && git checkout a33d1198ea7226ba3047e6a58304219d653c74ff
   echo GATSBY_MANIFEST_PATH=$(pwd)/bundle.zip >> ./snooty/.env.production
-  cd snooty
+  cd snooty && git checkout a33d1198ea7226ba3047e6a58304219d653c74ff
   npm ci --legacy-peer-deps
   git clone --depth 1 https://github.com/mongodb/docs-tools.git ./snooty/docs-tools
   mkdir -p ./snooty/static/images
