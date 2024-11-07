@@ -23,7 +23,7 @@ if [ ! -d "snooty" ]; then
   git clone https://github.com/mongodb/snooty.git 
 
   echo GATSBY_MANIFEST_PATH=$(pwd)/bundle.zip >> ./snooty/.env.production
-  cd snooty && git checkout a33d1198ea7226ba3047e6a58304219d653c74ff
+  cd snooty && git checkout netlify-poc
   npm ci --legacy-peer-deps
   git clone --depth 1 https://github.com/mongodb/docs-tools.git ./snooty/docs-tools
   mkdir -p ./snooty/static/images
