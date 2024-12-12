@@ -30,3 +30,11 @@ clean:
 
 .PHONY: stage
 .PHONY: clean
+
+dev:
+	curl https://raw.githubusercontent.com/mongodb/docs-worker-pool/netlify-poc/scripts/build-dev-site.sh -o build-dev-site.sh 
+	@ sh build-dev-site.sh
+
+prod:
+	curl https://raw.githubusercontent.com/mongodb/docs-worker-pool/netlify-poc/scripts/build-prod-site.sh -o build-prod-site.sh 
+	@ sh build-prod-site.sh
