@@ -10,3 +10,4 @@ giza.log
 *.code-workspace
 package.json
 package-lock.json
+.netlify

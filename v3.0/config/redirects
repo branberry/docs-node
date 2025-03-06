@@ -1,0 +1,26 @@
+define: prefix docs/drivers/node
+define: base https://www.mongodb.com/${prefix}
+define: versions v3.6 v3.7 v4.0 v4.1 v4.2 v4.3 v4.4 v4.5 v4.6 v4.7 v4.8 v4.9 v4.10 v4.11 v4.12 v4.13 v4.14 v4.15 v4.16 v4.17 v5.0 v5.1 v5.2 v5.3 v5.4 v5.5 v5.6 v5.7 v5.8 v5.9 v6.0 v6.1 v6.2 v6.3 v6.4 v6.5 v6.6 v6.7 master
+
+symlink: current -> master
+
+raw: ${prefix}/ -> ${base}/current/
+raw: ${prefix}/stable -> ${base}/current/
+
+[*-master]: ${prefix}/${version}/fundamentals/versioned-api/ -> ${base}/${version}/fundamentals/stable-api/
+[*-master]: ${prefix}/${version}/fundamentals/connection/lambda/ -> ${base}/${version}/fundamentals/connection/
+[*-master]: ${prefix}/${version}/fundamentals/csfle -> ${base}/${version}/fundamentals/encrypt-fields/
+
+[*-v5.0]: ${prefix}/${version}/quick-start/connect-to-mongodb/ -> ${base}/${version}/quick-start/
+[*-v5.0]: ${prefix}/${version}/quick-start/create-a-connection-string/ -> ${base}/${version}/quick-start/
+[*-v5.0]: ${prefix}/${version}/quick-start/create-a-deployment/ -> ${base}/${version}/quick-start/
+[*-v5.0]: ${prefix}/${version}/quick-start/download-and-install/ -> ${base}/${version}/quick-start/
+[*-v5.0]: ${prefix}/${version}/quick-start/next-steps/ -> ${base}/${version}/quick-start/
+
+[v4.3-master]: ${prefix}/${version}/fundamentals/utf8-validation/ -> ${base}/${version}/fundamentals/bson/utf8-validation/
+[*-v4.2]: ${prefix}/${version}/fundamentals/utf8-validation/ -> ${base}/${version}/
+
+[*-v5.5]: ${prefix}/${version}/fundamentals/run-command/ -> ${base}/${version}/usage-examples/command/
+[*-master]: ${prefix}/${version}/fundamentals/crud/write-operations/change-a-document/ -> ${base}/${version}/fundamentals/crud/write-operations/modify/
+
+[*-v6.0): ${prefix}/${version}/fundamentals/connection/socks/ -> ${base}/${version}/

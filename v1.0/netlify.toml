@@ -1,0 +1,20 @@
+[[integrations]]
+name = "snooty-cache-plugin"
+
+# Production context: all deploys from the Production branch
+# set in your site’s Branches settings in the UI will inherit
+# these settings.
+[build]
+publish = "snooty/public"
+command = ". ./build.sh"
+
+# [[redirects]]
+# from = "/fundamentals/versioned-api/"
+# to = "/fundamentals/stable-api/"
+# force = true
+
+[[redirects]]
+from = "/docs/*"
+to = "/:splat"
+force = true
+status = 200

@@ -1,0 +1,12 @@
+[[integrations]]
+name = "snooty-cache-plugin"
+
+[integrations.dev]
+# Set the "path" as the path from your test site to your integration's build folder.
+path = "../chatbot-netlify-integration/"
+# The following forces the integration to be used when building the test site.
+force_run_in_build = true
+
+[build]
+publish = "snooty/public"
+command = ". ./build.sh"
