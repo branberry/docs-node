@@ -1,5 +1,21 @@
 [[integrations]]
-name = "snooty-cache-plugin"
+name = 'snooty-cache-extension'
+
+[integrations.dev]
+# Set the "path" as the path from your test site to your extension's build folder.
+path = "../netlify-integrations/extensions/snooty-cache"
+# The following forces the extension to be used when building the test site.
+force_run_in_build = true
+
+
+[[integrations]]
+name = 'redoc-extension'
+
+[integrations.dev]
+# Set the "path" as the path from your test site to your extension's build folder.
+path = "../netlify-integrations/extensions/redoc"
+# The following forces the extension to be used when building the test site.
+force_run_in_build = true
 
 [build]
 publish = "snooty/public"
