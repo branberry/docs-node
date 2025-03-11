@@ -18,5 +18,5 @@ path = "../netlify-integrations/extensions/redoc"
 force_run_in_build = true
 
 [build]
-publish = "snooty/public"
+publish = "snooty/dist"
 command = ". ./build.sh"
